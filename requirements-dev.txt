@@ -1,0 +1,4 @@
+covdefaults>=2.1
+coverage[toml]
+pytest
+tox

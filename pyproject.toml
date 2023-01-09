@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "base16-builder"
+description = "A Python implementation of a Base16 Builder."
+readme = "README.md"
+requires-python = ">=3.7"
+license.file = "LICENSE"
+authors = [
+    { name = "Nikita Karamov", email = "me@kytta.dev" },
+]
+maintainers = [
+    { name = "Nikita Karamov", email = "me@kytta.dev" },
+]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Environment :: Console",
+    "License :: OSI Approved :: ISC License (ISCL)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = [
+	"pystache>=0.6",
+	"PyYAML>=5.2",
+    "importlib_metadata;python_version<'3.8'"
+]
+dynamic = ["version"]
+
+[project.urls]
+Source = "https://codeberg.org/kytta/base16-builder-python"
+Issues = "https://codeberg.org/kytta/base16-builder-python/issues"
+
+[project.scripts]
+base16-builder-python = "base16_builder:main"
+
+[tool.coverage.run]
+plugins = ["covdefaults"]
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+[tool.setuptools]
+py-modules = ["base16_builder"]
+
+[tool.setuptools_scm]
