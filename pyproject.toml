@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "base16-builder"
 description = "A Python implementation of a Base16 Builder."
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 license.file = "LICENSE"
 authors = [
     { name = "Nikita Karamov", email = "me@kytta.dev" },
@@ -27,7 +27,6 @@ classifiers = [
 dependencies = [
 	"pystache>=0.6",
 	"PyYAML>=5.2",
-    "importlib_metadata;python_version<'3.8'"
 ]
 dynamic = ["version"]
 
